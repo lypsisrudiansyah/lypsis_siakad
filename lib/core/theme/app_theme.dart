@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 /*
 * Never set default padding or margin for buttons
