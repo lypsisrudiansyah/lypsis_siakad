@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_auto_complete
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QAutoComplete extends StatefulWidget {
   const QAutoComplete({

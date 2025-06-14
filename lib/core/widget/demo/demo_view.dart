@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:io';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
+import 'package:lypsis_siakad/core/widget/button/button.dart';
+import 'package:lypsis_siakad/core/widget/hyper_ui/dialog/q_dialog.dart';
+import 'package:lypsis_siakad/core/widget/hyper_ui/navigation/qnavigation.dart';
+import 'package:lypsis_siakad/core/widget/responsive/responsive_grid.dart';
 import 'package:widgets_to_image/widgets_to_image.dart';
 
 extension AppExampleViewStringExtension on String {
@@ -9,7 +13,7 @@ extension AppExampleViewStringExtension on String {
     //eg. Instance of 'InstructorDetail'
     // to Instructor Detail
     var value = this;
-    if (value.indexOf('Instance of') != -1) {
+    if (value.contains('Instance of')) {
       value = value.replaceAll('Instance of ', '');
     }
     value = value.replaceAll("'", "");
@@ -48,7 +52,7 @@ class DemoView extends StatelessWidget {
       bool isMobile = MediaQuery.of(context).size.width < 850;
       return Scaffold(
         appBar: AppBar(
-          title: Text("$title"),
+          title: Text(title),
           actions: [
             if (Platform.isWindows)
               InkWell(
@@ -79,7 +83,7 @@ class DemoView extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => view!,
+                          builder: (context) => view,
                         ),
                       );
 
@@ -199,7 +203,7 @@ class DemoView extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => view!,
+                                      builder: (context) => view,
                                     ),
                                   );
 
@@ -410,7 +414,7 @@ class DemoView extends StatelessWidget {
                                                         Radius.circular(12.0),
                                                       ),
                                                     ),
-                                                    child: Container(
+                                                    child: SizedBox(
                                                       width:
                                                           constraints.maxWidth *
                                                               0.3,
@@ -432,7 +436,7 @@ class DemoView extends StatelessWidget {
                                       builder: (context) => Column(
                                         children: [
                                           Expanded(
-                                            child: child!,
+                                            child: child,
                                           ),
                                           if (reviewModeEnabled)
                                             Material(
@@ -539,7 +543,7 @@ class DemoView extends StatelessWidget {
                                             : primaryColor,
                                       ),
                                       child: Text(
-                                        "${itemIndex}",
+                                        "$itemIndex",
                                         textAlign: TextAlign.center,
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
@@ -551,7 +555,7 @@ class DemoView extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Text(
-                                        "${name}",
+                                        "$name",
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(

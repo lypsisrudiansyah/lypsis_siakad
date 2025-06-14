@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class FloatingActions extends StatelessWidget {
   final List<Widget> children;

@@ -1,7 +1,7 @@
 //#TEMPLATE reuseable_carousel
 import 'package:carousel_slider/carousel_slider.dart' as cl;
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 enum CarouselType {
   type1,

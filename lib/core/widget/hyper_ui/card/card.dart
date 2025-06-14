@@ -2,7 +2,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QCard extends StatelessWidget {
   const QCard({
@@ -87,7 +87,7 @@ class QCard extends StatelessWidget {
                     ),
                   ),
                   if (actions.isNotEmpty)
-                    Container(
+                    SizedBox(
                       height: 32,
                       child: Row(
                         children: actions,

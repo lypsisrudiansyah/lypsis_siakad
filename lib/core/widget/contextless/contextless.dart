@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 BuildContext get currentContext => navigatorKey.currentContext!;

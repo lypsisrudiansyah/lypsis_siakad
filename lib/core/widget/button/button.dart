@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class QButton extends StatelessWidget {
   final String? label; // Make label optional
@@ -13,7 +13,7 @@ class QButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
   const QButton({
-    Key? key,
+    super.key,
     this.label, // Remove required
     this.color,
     this.icon,
@@ -24,8 +24,7 @@ class QButton extends StatelessWidget {
     this.size = bs.md,
     this.onPressed,
   })  : assert(label != null || icon != null,
-            'Either label or icon must be provided'),
-        super(key: key);
+            'Either label or icon must be provided');
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +107,7 @@ class QButton extends StatelessWidget {
     }
 
     return isFullWidth
-        ? Container(
+        ? SizedBox(
             width: MediaQuery.of(context).size.width,
             child: buttonChild,
           )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 extension ValueNotifierExtension on dynamic {
   // If you want to store a value in SharedPreferences
@@ -161,7 +161,7 @@ class _ValueNotifierExtensionWidgetExampleState
                               y.value += 2;
                             },
                             child: Text(
-                              "Y: ${value}",
+                              "Y: $value",
                               style: const TextStyle(
                                 fontSize: 48.0,
                                 fontWeight: FontWeight.bold,
@@ -189,7 +189,7 @@ class _ValueNotifierExtensionWidgetExampleState
                               z.value += 3;
                             },
                             child: Text(
-                              "Z: ${value}",
+                              "Z: $value",
                               style: const TextStyle(
                                 fontSize: 48.0,
                                 fontWeight: FontWeight.bold,

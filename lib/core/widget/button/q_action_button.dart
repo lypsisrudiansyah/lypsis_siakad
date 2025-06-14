@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
-import 'package:reusekit/core/widget/button/button.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/widget/button/button.dart';
 
 class QActionButton extends StatelessWidget {
   final String label;
