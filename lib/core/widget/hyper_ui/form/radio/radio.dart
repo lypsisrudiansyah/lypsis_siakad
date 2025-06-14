@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_radio_field
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class QRadioField extends StatefulWidget {
   const QRadioField({

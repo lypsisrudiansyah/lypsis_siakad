@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 import 'package:latlong2/latlong.dart';
 
 class QLocationPicker extends StatefulWidget {
@@ -292,7 +292,7 @@ class _FullScreenLocationPickerState extends State<FullScreenLocationPicker> {
           icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Container(
+        title: SizedBox(
           height: 42,
           child: TextField(
             controller: _searchController,

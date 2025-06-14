@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_date_picker
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QDatePicker extends StatefulWidget {
   const QDatePicker({

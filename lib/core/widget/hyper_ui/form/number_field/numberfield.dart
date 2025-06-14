@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_number_field
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QNumberField extends StatefulWidget {
   const QNumberField({

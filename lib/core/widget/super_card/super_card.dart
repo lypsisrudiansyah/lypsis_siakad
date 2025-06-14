@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/widget/hyper_ui/form/qty_field/qty_field.dart';
-import 'package:reusekit/core/widget/super_card/helper.dart';
+import 'package:lypsis_siakad/core/widget/hyper_ui/form/qty_field/qty_field.dart';
+import 'package:lypsis_siakad/core/widget/super_card/helper.dart';
 
 enum SuperCardType {
   //base card

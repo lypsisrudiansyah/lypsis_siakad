@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_check_field
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class QCheckField extends StatefulWidget {
   const QCheckField({

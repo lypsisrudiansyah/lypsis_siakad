@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:reusekit/core.dart'; // Assuming primaryColor and navigation (to, offAll) are here
+import 'package:lypsis_siakad/core.dart'; // Assuming primaryColor and navigation (to, offAll) are here
 import 'package:lypsis_siakad/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:lypsis_siakad/views/login_view.dart'; // Fallback
 import 'package:lypsis_siakad/views/admin_dashboard_view.dart';

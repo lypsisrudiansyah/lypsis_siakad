@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:reusekit/core/theme/theme_config.dart'; // Add this line
+import 'package:lypsis_siakad/core/theme/theme_config.dart'; // Add this line
 
 enum StatisticCardChartType {
   line,

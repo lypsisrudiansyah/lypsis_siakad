@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:file_picker/file_picker.dart';
 

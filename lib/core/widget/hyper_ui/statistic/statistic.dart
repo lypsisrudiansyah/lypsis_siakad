@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_statistic
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QStatistic extends StatelessWidget {
   const QStatistic({

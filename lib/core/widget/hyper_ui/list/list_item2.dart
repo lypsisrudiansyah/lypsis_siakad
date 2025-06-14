@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class ListItem2 extends StatelessWidget {
   const ListItem2({

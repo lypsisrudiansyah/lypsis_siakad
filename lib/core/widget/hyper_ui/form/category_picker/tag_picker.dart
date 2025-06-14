@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_tag_picker
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QTagPicker extends StatefulWidget {
   const QTagPicker({

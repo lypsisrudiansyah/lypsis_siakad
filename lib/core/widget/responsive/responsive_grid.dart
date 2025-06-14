@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class ResponsiveGridView extends StatelessWidget {
   final List<Widget> children;

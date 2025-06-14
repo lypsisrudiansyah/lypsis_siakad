@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:flutter_quill_delta_from_html/parser/html_to_delta.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 import 'package:vsc_quill_delta_to_html/vsc_quill_delta_to_html.dart';
 
 class QMemoField2 extends StatefulWidget {

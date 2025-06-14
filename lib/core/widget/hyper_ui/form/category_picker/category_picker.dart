@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_category_picker
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 enum CategoryPickerMode {
   scrollable,
@@ -164,7 +164,7 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
                       ),
                     )
                   else if (widget.mode == CategoryPickerMode.wrap)
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width,
                       child: Wrap(
                         spacing: spSm, // Use spSm from themeConfig
@@ -173,7 +173,7 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
                           items.length,
                           (int index) {
                             bool selected = selectedIndex == index;
-                            return Container(
+                            return SizedBox(
                               height: 38.0,
                               child: QButton(
                                 label: items[index]['label'],

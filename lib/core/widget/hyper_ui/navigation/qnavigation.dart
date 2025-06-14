@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class NavigationMenu {
   NavigationMenu({
@@ -248,9 +248,9 @@ class QNavigationState extends State<QNavigation> {
                               ),
                             ),
                           );
-                        }).toList(),
+                        }),
                     ];
-                  }).toList(),
+                  }),
                 ],
               ),
             ),
@@ -330,7 +330,7 @@ class QNavigationState extends State<QNavigation> {
                                 height: spXxs,
                               ),
                               Text(
-                                "${item.label}",
+                                item.label,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 14.0,

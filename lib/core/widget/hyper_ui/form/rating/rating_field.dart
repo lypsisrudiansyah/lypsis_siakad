@@ -1,7 +1,7 @@
 //#TEMPLATE reuseable_rating_field
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:reusekit/core/theme/theme_config.dart';
+import 'package:lypsis_siakad/core/theme/theme_config.dart';
 
 class QRatingField extends StatefulWidget {
   const QRatingField({

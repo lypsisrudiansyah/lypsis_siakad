@@ -1,6 +1,6 @@
 //#TEMPLATE reuseable_category_picker
 import 'package:flutter/material.dart';
-import 'package:reusekit/core.dart';
+import 'package:lypsis_siakad/core.dart';
 
 class QCategoryWrapPicker extends StatefulWidget {
   const QCategoryWrapPicker({
@@ -82,7 +82,7 @@ class _QCategoryWrapPickerState extends State<QCategoryWrapPicker> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: FormField(
         initialValue: false,
