@@ -5,7 +5,6 @@ import 'package:lypsis_siakad/core/usecases/usecase.dart';
 import 'package:lypsis_siakad/features/auth/domain/usecases/sign_in.dart';
 import 'package:lypsis_siakad/features/auth/domain/usecases/sign_out.dart';
 import 'package:lypsis_siakad/features/auth/domain/usecases/sign_up.dart';
-import 'package:lypsis_siakad/model.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

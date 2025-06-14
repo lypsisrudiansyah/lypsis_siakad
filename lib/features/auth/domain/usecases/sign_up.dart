@@ -2,8 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
 import 'package:lypsis_siakad/core/usecases/usecase.dart';
+import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
 import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.dart';
-import 'package:lypsis_siakad/model.dart';
 
 class SignUp implements UseCase<UserProfile?, SignUpParams> {
   final AuthRepository repository;

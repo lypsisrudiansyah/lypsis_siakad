@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
 import 'package:lypsis_siakad/core/usecases/usecase.dart';
 import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.dart';
-import 'package:lypsis_siakad/model.dart';
+import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
 
 class GetUserProfile implements UseCase<UserProfile?, IdParams> {
   final AuthRepository repository;

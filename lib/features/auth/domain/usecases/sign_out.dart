@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:siakad/core/error/failures.dart';
-import 'package:siakad/core/usecases/usecase.dart';
-import 'package:siakad/features/auth/domain/repositories/auth_repository.dart';
+import 'package:lypsis_siakad/core/error/failures.dart';
+import 'package:lypsis_siakad/core/usecases/usecase.dart';
+import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.dart';
 
 class SignOut implements UseCase<void, NoParams> {
   final AuthRepository repository;
