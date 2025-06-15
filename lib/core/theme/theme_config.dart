@@ -25,15 +25,15 @@ backgroundColor:
 7. Jangan pernah ubah contentPadding dari ListTile
 */
 //@ My Config
-Color primaryColor = Color(0xff4E50FC);
-Color secondaryColor = Color(0xFFE8E9ED);
-Color successColor = Color(0xff00D6AC);
-Color dangerColor = Color(0xFFD81B60);
-Color infoColor = Color(0xff2196F3);
-Color warningColor = Color(0xffF83E07);
-Color disabledBoldColor = Color(0xFF626C7F);
-Color disabledColor = Color(0xFFB0B0B0);
-Color disabledOutlineBorderColor = Color(0xFFB0B0B0);
+Color primaryColor = Color(0xFF43A047); // Hijau cerah (green[600])
+Color secondaryColor = Color(0xFFC8E6C9); // Hijau muda (green[100]) — untuk background ringan
+Color successColor = Color(0xFF66BB6A); // green[400] — status sukses yang soft
+Color dangerColor = Color(0xFFE53935); // red[600] — lebih terang dari sebelumnya
+Color infoColor = Color(0xFF29B6F6); // light blue[400] — info yang cerah
+Color warningColor = Color(0xFFFFB300); // amber[600] — peringatan cerah
+Color disabledBoldColor = Color(0xFF757575); // grey[600]
+Color disabledColor = Color(0xFFBDBDBD); // grey[400]
+Color disabledOutlineBorderColor = Color(0xFFE0E0E0); // grey[300]
 
 Color scaffoldBackgroundColor = Colors.grey[300]!;
 Color scaffoldWhiteBackgroundColor = Colors.white;
