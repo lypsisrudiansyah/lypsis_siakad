@@ -2,5 +2,7 @@
   "@@locale": "en",
   "login": "Login",
   "register": "Register",
-  "profile": "Profile"
+  "profile": "Profile",
+  "app_description1": "Academic Information System",
+  "dummy": "dummy"
 }

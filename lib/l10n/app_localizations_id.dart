@@ -18,6 +18,8 @@ class AppLocalizationsId extends AppLocalizations {
   String get profile => 'Profil';
 
   @override
-  String get login_completeProfileMsg =>
-      'Lengkapi profil Anda untuk melanjutkan';
+  String get app_description1 => 'Sistem Informasi Akademik';
+
+  @override
+  String get dummy => 'dummy';
 }

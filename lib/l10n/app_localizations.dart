@@ -118,11 +118,17 @@ abstract class AppLocalizations {
   /// **'Profil'**
   String get profile;
 
-  /// No description provided for @login_completeProfileMsg.
+  /// No description provided for @app_description1.
   ///
   /// In id, this message translates to:
-  /// **'Lengkapi profil Anda untuk melanjutkan'**
-  String get login_completeProfileMsg;
+  /// **'Sistem Informasi Akademik'**
+  String get app_description1;
+
+  /// No description provided for @dummy.
+  ///
+  /// In id, this message translates to:
+  /// **'dummy'**
+  String get dummy;
 }
 
 class _AppLocalizationsDelegate

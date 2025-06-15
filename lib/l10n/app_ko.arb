@@ -2,5 +2,7 @@
   "@@locale": "ko",
   "login": "로그인",
   "register": "회원가입",
-  "profile": "프로필"
+  "profile": "프로필",
+  "app_description1": "학사정보시스템",
+  "dummy": "dummy"
 }

@@ -18,6 +18,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get profile => '프로필';
 
   @override
-  String get login_completeProfileMsg =>
-      'Lengkapi profil Anda untuk melanjutkan';
+  String get app_description1 => '학사정보시스템';
+
+  @override
+  String get dummy => 'dummy';
 }
