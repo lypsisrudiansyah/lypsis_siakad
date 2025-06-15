@@ -9,7 +9,7 @@ import 'package:lypsis_siakad/views/mahasiswa_dashboard_view.dart';
 import 'package:lypsis_siakad/injection_container.dart'; // For GetIt instance
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({super.key});
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -53,16 +53,16 @@ class _SplashPageState extends State<SplashPage>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       switch (role.toLowerCase()) {
         case 'admin':
-          offAll(const AdminDashboardView());
+          // offAll(const AdminDashboardView());
           break;
         case 'dosen':
-          offAll(const DosenDashboardView());
+          // offAll(const DosenDashboardView());
           break;
         case 'mahasiswa':
-          offAll(const MahasiswaDashboardView());
+          // offAll(const MahasiswaDashboardView());
           break;
         default:
-          offAll(const LoginView());
+          // offAll(const LoginView());
       }
     });
   }

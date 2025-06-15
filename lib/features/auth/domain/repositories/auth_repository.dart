@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
-import 'package:lypsis_siakad/model.dart'; // Assuming UserProfile is here
+import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
 
 abstract class AuthRepository {
   Future<Either<Failure, UserProfile?>> signIn({

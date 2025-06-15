@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
 import 'package:lypsis_siakad/features/auth/data/datasources/auth_remote_data_source.dart';
+import 'package:lypsis_siakad/features/auth/data/models/user_profile_model.dart';
 import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.dart';
-import 'package:lypsis_siakad/model.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthRemoteDataSource remoteDataSource;
@@ -14,7 +14,7 @@ class AuthRepositoryImpl implements AuthRepository {
   });
 
   @override
-  Future<Either<Failure, UserProfile?>> signIn({required String email, required String password}) async {
+  Future<Either<Failure, UserProfileModel?>> signIn({required String email, required String password}) async {
     // if (await networkInfo.isConnected) { // Example network check
     try {
       final userProfile = await remoteDataSource.signIn(email: email, password: password);
@@ -30,7 +30,7 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserProfile?>> signUp({
+  Future<Either<Failure, UserProfileModel?>> signUp({
     required String email, required String password, required String nama,
     required String role, String? nim, String? nidn,
   }) async {
@@ -58,7 +58,7 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserProfile?>> getCurrentUser() async {
+  Future<Either<Failure, UserProfileModel?>> getCurrentUser() async {
     try {
       final supabaseUser = await remoteDataSource.getCurrentSupabaseUser();
       if (supabaseUser != null) {
@@ -74,7 +74,7 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserProfile?>> getUserProfile(String authId) async {
+  Future<Either<Failure, UserProfileModel?>> getUserProfile(String authId) async {
     try {
       final userProfile = await remoteDataSource.getUserProfile(authId);
       return Right(userProfile);
