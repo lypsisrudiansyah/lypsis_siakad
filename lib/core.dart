@@ -9,4 +9,4 @@ export 'package:lypsis_siakad/core/widget/hyper_ui/form/category_wrap_picker/cat
 export 'package:lypsis_siakad/core/widget/hyper_ui/form/dialog_text_field/dialog_text_field.dart';
 export 'package:lypsis_siakad/core/widget/hyper_ui/form/textfield/text_field.dart';
 export 'package:lypsis_siakad/core/util/validator/validator.dart';
-
+export 'package:lypsis_siakad/core/widget/contextless/contextless.dart';

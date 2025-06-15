@@ -1,14 +1,14 @@
+import 'package:lypsis_siakad/features/auth/data/models/user_profile_model.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:lypsis_siakad/model.dart'; // Assuming UserProfile is here
 import 'package:lypsis_siakad/core/error/failures.dart';
 
 abstract class AuthRemoteDataSource {
-  Future<UserProfile?> signIn({
+  Future<UserProfileModel?> signIn({
     required String email,
     required String password,
   });
 
-  Future<UserProfile?> signUp({
+  Future<UserProfileModel?> signUp({
     required String email,
     required String password,
     required String nama,
@@ -21,9 +21,9 @@ abstract class AuthRemoteDataSource {
 
   Future<User?> getCurrentSupabaseUser();
 
-  Future<UserProfile?> getUserProfile(String authId);
+  Future<UserProfileModel?> getUserProfile(String authId);
 
-  Future<UserProfile> _createUserProfileInTable({
+  Future<UserProfileModel> _createUserProfileInTable({
     required String authId,
     required String email,
     required String nama,
@@ -41,7 +41,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   AuthRemoteDataSourceImpl({required this.supabaseClient});
 
   @override
-  Future<UserProfile?> signIn({required String email, required String password}) async {
+  Future<UserProfileModel?> signIn({required String email, required String password}) async {
     try {
       final response = await supabaseClient.auth.signInWithPassword(
         email: email,
@@ -58,7 +58,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
-  Future<UserProfile?> signUp({
+  Future<UserProfileModel?> signUp({
     required String email, required String password, required String nama,
     required String role, String? nim, String? nidn,
   }) async {
@@ -98,10 +98,10 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
-  Future<UserProfile?> getUserProfile(String authId) async {
+  Future<UserProfileModel?> getUserProfile(String authId) async {
     try {
       final response = await supabaseClient.from('users').select().eq('auth_id', authId).single();
-      return UserProfile.fromJson(response);
+      return UserProfileModel.fromJson(response);
     } catch (e) {
       // It's okay if user profile doesn't exist yet in some scenarios, or if query fails
       return null;
@@ -109,7 +109,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   }
 
   @override
-  Future<UserProfile> _createUserProfileInTable({ required String authId, required String email, required String nama, required String role, String? nim, String? nidn, }) async {
+  Future<UserProfileModel> _createUserProfileInTable({ required String authId, required String email, required String nama, required String role, String? nim, String? nidn, }) async {
     try {
       final response = await supabaseClient
           .from('users')
@@ -121,7 +121,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
           })
           .select()
           .single();
-      return UserProfile.fromJson(response);
+      return UserProfileModel.fromJson(response);
     } catch (e) {
       throw ServerFailure('Create user profile failed: $e');
     }
