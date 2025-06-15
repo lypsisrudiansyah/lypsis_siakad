@@ -7,12 +7,13 @@ plugins {
 
 android {
     namespace = "com.lypsisrudiansyah.lypsis_siakad"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 35  // flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973" // flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
@@ -24,10 +25,12 @@ android {
         applicationId = "com.lypsisrudiansyah.lypsis_siakad"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdk = 24  // flutter.minSdkVersion
+        targetSdk = 35  // flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        multiDexEnabled = true
+        // coreLibraryDesugaringEnabled = true
     }
 
     buildTypes {
@@ -41,4 +44,8 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lypsis_siakad/core.dart'; // Assuming primaryColor and navigation (to, offAll) are here
 import 'package:lypsis_siakad/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:lypsis_siakad/views/login_view.dart'; // Fallback
-import 'package:lypsis_siakad/views/admin_dashboard_view.dart';
-import 'package:lypsis_siakad/views/dosen_dashboard_view.dart';
-import 'package:lypsis_siakad/views/mahasiswa_dashboard_view.dart';
+// import 'package:lypsis_siakad/views/login_view.dart'; // Fallback
+// import 'package:lypsis_siakad/views/admin_dashboard_view.dart';
+// import 'package:lypsis_siakad/views/dosen_dashboard_view.dart';
+// import 'package:lypsis_siakad/views/mahasiswa_dashboard_view.dart';
 import 'package:lypsis_siakad/injection_container.dart'; // For GetIt instance
 
 class SplashPage extends StatefulWidget {
@@ -83,12 +83,12 @@ class _SplashPageState extends State<SplashPage>
             _navigateBasedOnRole(state.user.role);
           } else if (state is AuthUnauthenticated || state is AuthFailure) {
              // Delay navigation to allow splash animations to be seen
-            Future.delayed(const Duration(milliseconds: 1500), () { // Adjusted delay
-              offAll(const LoginView());
+            Future.delayed(const Duration(milliseconds: 150000), () { // Adjusted delay
+              // offAll(const LoginView());
             });
           } else if (state is AuthNavigationToLogin) {
-             Future.delayed(const Duration(milliseconds: 1500), () {
-              offAll(const LoginView());
+             Future.delayed(const Duration(milliseconds: 150000), () {
+              // offAll(const LoginView());
             });
           }
         },
