@@ -1,0 +1,7 @@
+{
+  "@@locale": "id",
+  "login": "Masuk",
+  "register": "Daftar",
+  "profile": "Profil",
+  "login_completeProfileMsg": "Lengkapi profil Anda untuk melanjutkan"
+}
