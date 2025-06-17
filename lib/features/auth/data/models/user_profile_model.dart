@@ -17,8 +17,6 @@ class UserProfileModel extends UserProfile {
     super.isActive,
     required super.createdAt,
     required super.updatedAt,
-    required super.updatedAt,
-    required super.updatedAt,
   });
 
   factory UserProfileModel.fromJson(Map<String, dynamic> json) {
