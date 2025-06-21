@@ -127,7 +127,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                       ),
                       const SizedBox(height: 10),
                       Text(
-                        context.translate("sdas") ?? "-",
+                        context.translate("app_description1") ?? "-",
                         style: TextStyle(fontSize: 16, color: Colors.white.withAlpha(204), fontWeight: FontWeight.w300),
                       ),
                       const SizedBox(height: 50),
@@ -161,6 +161,13 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                                 context.read<LocaleCubit>().changeLocale(const Locale('id'));
                               },
                               child: Text("Profil ID"), // Contoh fallback
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                // Ganti ke Bahasa Indonesia
+                                context.read<LocaleCubit>().changeLocale(const Locale('ko'));
+                              },
+                              child: Text("Profil KO"), // Contoh fallback
                             ),
                           ],
                         ),
