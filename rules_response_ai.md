@@ -74,6 +74,12 @@ lib/
   - One feature (e.g., login screen).  
   - BLoC + Either integration first.  
 
+### **6. Naming files and Class**
+  - use cases in domain layer : 
+    - example : 
+        - SignIn -> SignInUseCase, namefile : sign_in_use_case.dart
+        - ProductSearch -> ProductSearchUseCase, namefile : product_search_use_case.dart
+
 ---
 
 **Action Item**:  
