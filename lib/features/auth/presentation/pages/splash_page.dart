@@ -127,7 +127,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                       ),
                       const SizedBox(height: 10),
                       Text(
-                        dataLocale?.app_description1 ?? "-",
+                        context.translate("sdas") ?? "-",
                         style: TextStyle(fontSize: 16, color: Colors.white.withAlpha(204), fontWeight: FontWeight.w300),
                       ),
                       const SizedBox(height: 50),
