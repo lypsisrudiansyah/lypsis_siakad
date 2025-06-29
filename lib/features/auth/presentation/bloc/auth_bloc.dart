@@ -26,6 +26,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }) : super(AuthInitial()) {
     on<AuthCheckStatusRequested>(_onAuthCheckStatusRequested);
     on<AuthSignInRequested>(_onAuthSignInRequested);
+    on<AuthSignUpRequested>(_onAuthSignUpRequested);
     on<AuthSignOutRequested>(_onAuthSignOutRequested);
     on<AuthNavigateToLogin>(_onAuthNavigateToLogin);
   }
@@ -67,6 +68,33 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
   }
 
+  Future<void> _onAuthSignUpRequested(
+    AuthSignUpRequested event,
+    Emitter<AuthState> emit,
+  ) async {
+    emit(AuthLoading());
+    final failureOrUser = await signUp(
+      SignUpParams(
+        email: event.email,
+        password: event.password,
+        nama: event.nama,
+        role: event.role,
+        nim: event.nim,
+        nidn: event.nidn,
+      ),
+    );
+    failureOrUser.fold(
+      (failure) => emit(AuthFailure(message: failure.message)),
+      (user) {
+        if (user != null) {
+          emit(AuthAuthenticated(user: user));
+        } else {
+          emit(const AuthFailure(message: 'Sign up successful but no user data returned.'));
+        }
+      },
+    );
+  }
+  
   Future<void> _onAuthSignOutRequested(
     AuthSignOutRequested event,
     Emitter<AuthState> emit,

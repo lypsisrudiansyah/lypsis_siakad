@@ -19,9 +19,34 @@ class AuthSignInRequested extends AuthEvent {
   List<Object> get props => [email, password];
 }
 
+/*
+email: event.email,
+        password: event.password,
+        nama: event.nama,
+        role: event.role,
+        nim: event.nim,
+        nidn: event.nidn,
+*/
 class AuthSignUpRequested extends AuthEvent {
-  // Add params as needed: email, password, nama, role, etc.
-  // For brevity, not adding all here.
+  
+final String email;
+  final String password;
+  final String nama;
+  final String role;
+  final String? nim;
+  final String? nidn;
+
+  const AuthSignUpRequested({
+    required this.email,
+    required this.password,
+    required this.nama,
+    required this.role,
+    this.nim,
+    this.nidn,
+  });
+
+  @override
+  List<Object?> get props => [email, password, nama, role, nim, nidn];
 }
 
 class AuthSignOutRequested extends AuthEvent {}
