@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lypsis_siakad/core.dart'; // Assuming primaryColor and navigation (to, offAll) are here
 import 'package:lypsis_siakad/core/localization/cubit/locale_cubit.dart';
 import 'package:lypsis_siakad/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:lypsis_siakad/features/auth/presentation/pages/login_page.dart';
 // import 'package:lypsis_siakad/views/login_view.dart'; // Fallback
 // import 'package:lypsis_siakad/views/admin_dashboard_view.dart';
 // import 'package:lypsis_siakad/views/dosen_dashboard_view.dart';
 // import 'package:lypsis_siakad/views/mahasiswa_dashboard_view.dart';
-import 'package:lypsis_siakad/l10n/app_localizations.dart'; // For GetIt instance
+// import 'package:lypsis_siakad/l10n/app_localizations.dart'; // L10N
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -65,7 +66,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
           // offAll(const MahasiswaDashboardView());
           break;
         default:
-        // offAll(const LoginView());
+          offAll(const LoginPage());
       }
     });
   }
