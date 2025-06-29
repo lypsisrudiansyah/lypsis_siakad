@@ -7,7 +7,6 @@ import 'package:lypsis_siakad/features/auth/presentation/bloc/auth_bloc.dart';
 // import 'package:lypsis_siakad/views/admin_dashboard_view.dart';
 // import 'package:lypsis_siakad/views/dosen_dashboard_view.dart';
 // import 'package:lypsis_siakad/views/mahasiswa_dashboard_view.dart';
-import 'package:lypsis_siakad/injection_container.dart';
 import 'package:lypsis_siakad/l10n/app_localizations.dart'; // For GetIt instance
 
 class SplashPage extends StatefulWidget {
@@ -79,7 +78,8 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    final AppLocalizations? dataLocale = AppLocalizations.of(context);
+    // * When we using L10N
+    // final AppLocalizations? dataLocale = AppLocalizations.of(context);
 
     return Scaffold(
       backgroundColor: primaryColor, // Assuming primaryColor is globally available
