@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
-import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
+import 'package:lypsis_siakad/features/auth/domain/entities/auth_user_entity.dart';
 
 abstract class AuthRepository {
-  Future<Either<Failure, UserProfile?>> signIn({
+  Future<Either<Failure, AuthUserEntiry?>> signIn({
     required String email,
     required String password,
   });
 
-  Future<Either<Failure, UserProfile?>> signUp({
+  Future<Either<Failure, AuthUserEntiry?>> signUp({
     required String email,
     required String password,
     required String nama,
@@ -19,7 +19,7 @@ abstract class AuthRepository {
 
   Future<Either<Failure, void>> signOut();
 
-  Future<Either<Failure, UserProfile?>> getCurrentUser();
+  Future<Either<Failure, AuthUserEntiry?>> getCurrentUser();
 
-  Future<Either<Failure, UserProfile?>> getUserProfile(String authId);
+  Future<Either<Failure, AuthUserEntiry?>> getUserProfile(String authId);
 }
