@@ -20,9 +20,9 @@ class AuthRepositoryImpl implements AuthRepository {
       final userProfile = await remoteDataSource.signIn(email: email, password: password);
       return Right(userProfile);
     } on ServerFailure catch (e) {
-      return Left(ServerFailure(e.message));
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure('An unexpected error occurred during sign in.'));
+      return Left(ServerFailure(message: 'An unexpected error occurred during sign in.'));
     }
     // } else {
     //   return Left(NetworkFailure('No internet connection'));
@@ -39,9 +39,9 @@ class AuthRepositoryImpl implements AuthRepository {
           email: email, password: password, nama: nama, role: role, nim: nim, nidn: nidn);
       return Right(userProfile);
     } on ServerFailure catch (e) {
-      return Left(ServerFailure(e.message));
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure('An unexpected error occurred during sign up.'));
+      return Left(ServerFailure(message: 'An unexpected error occurred during sign up.'));
     }
   }
 
@@ -51,9 +51,9 @@ class AuthRepositoryImpl implements AuthRepository {
       await remoteDataSource.signOut();
       return const Right(null);
     } on ServerFailure catch (e) {
-      return Left(ServerFailure(e.message));
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure('An unexpected error occurred during sign out.'));
+      return Left(ServerFailure(message: 'An unexpected error occurred during sign out.'));
     }
   }
 
@@ -67,9 +67,9 @@ class AuthRepositoryImpl implements AuthRepository {
       }
       return const Right(null);
     } on ServerFailure catch (e) {
-      return Left(ServerFailure(e.message));
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure('An unexpected error occurred fetching current user.'));
+      return Left(ServerFailure(message: 'An unexpected error occurred fetching current user.'));
     }
   }
 
@@ -79,9 +79,9 @@ class AuthRepositoryImpl implements AuthRepository {
       final userProfile = await remoteDataSource.getUserProfile(authId);
       return Right(userProfile);
     } on ServerFailure catch (e) {
-      return Left(ServerFailure(e.message));
+      return Left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure('An unexpected error occurred fetching user profile.'));
+      return Left(ServerFailure(message: 'An unexpected error occurred fetching user profile.'));
     }
   }
 }

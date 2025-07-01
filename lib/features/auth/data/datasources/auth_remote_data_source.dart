@@ -53,7 +53,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       }
       return null;
     } catch (e) {
-      throw ServerFailure('Sign in failed: $e');
+      throw ServerFailure(message: 'Sign in failed: $e');
     }
   }
 
@@ -75,7 +75,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       }
       return null;
     } catch (e) {
-      throw ServerFailure('Sign up failed: $e');
+      throw ServerFailure(message: 'Sign up failed: $e');
     }
   }
 
@@ -84,7 +84,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     try {
       await supabaseClient.auth.signOut();
     } catch (e) {
-      throw ServerFailure('Sign out failed: $e');
+      throw ServerFailure(message: 'Sign out failed: $e');
     }
   }
 
@@ -93,7 +93,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     try {
       return supabaseClient.auth.currentUser;
     } catch (e) {
-      throw ServerFailure('Get current user failed: $e');
+      throw ServerFailure(message: 'Get current user failed: $e');
     }
   }
 
@@ -123,7 +123,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
           .single();
       return AuthUserModel.fromJson(response);
     } catch (e) {
-      throw ServerFailure('Create user profile failed: $e');
+      throw ServerFailure(message: 'Create user profile failed: $e');
     }
   }
 
