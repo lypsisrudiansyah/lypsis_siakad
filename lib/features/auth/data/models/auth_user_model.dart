@@ -1,8 +1,8 @@
 
-import '../../domain/entities/user_profile.dart';
+import '../../domain/entities/auth_user_entity.dart';
 
-class UserProfileModel extends UserProfile {
-  UserProfileModel({
+class AuthUserModel extends AuthUserEntiry {
+  AuthUserModel({
     required super.id,
     super.authId,
     required super.email,
@@ -19,8 +19,8 @@ class UserProfileModel extends UserProfile {
     required super.updatedAt,
   });
 
-  factory UserProfileModel.fromJson(Map<String, dynamic> json) {
-    return UserProfileModel(
+  factory AuthUserModel.fromJson(Map<String, dynamic> json) {
+    return AuthUserModel(
       id: json['id'],
       authId: json['auth_id'],
       email: json['email'],
@@ -41,7 +41,7 @@ class UserProfileModel extends UserProfile {
     );
   }
 
-  // toJson bisa tetap sama jika UserProfile.toJson() sudah cukup,
+  // toJson bisa tetap sama jika AuthUserEntiry.toJson() sudah cukup,
   // atau di-override jika model memiliki field tambahan.
   @override
   Map<String, dynamic> toJson() {
@@ -52,8 +52,8 @@ class UserProfileModel extends UserProfile {
     return json;
   }
 
-  UserProfile toEntity() {
-    return UserProfile(
+  AuthUserEntiry toEntity() {
+    return AuthUserEntiry(
       id: id,
       authId: authId,
       email: email,
