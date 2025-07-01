@@ -1,5 +1,5 @@
 // features/auth/domain/entities/user_profile.dart
-class AuthUserEntiry {
+class AuthUserEntity {
   final String id;
   final String? authId;
   final String email;
@@ -15,7 +15,7 @@ class AuthUserEntiry {
   final DateTime createdAt;
   final DateTime updatedAt;
 
-  AuthUserEntiry({
+  AuthUserEntity({
     required this.id,
     this.authId,
     required this.email,
@@ -32,8 +32,8 @@ class AuthUserEntiry {
     required this.updatedAt,
   });
 
-  factory AuthUserEntiry.fromJson(Map<String, dynamic> json) {
-    return AuthUserEntiry(
+  factory AuthUserEntity.fromJson(Map<String, dynamic> json) {
+    return AuthUserEntity(
       id: json['id'],
       authId: json['auth_id'],
       email: json['email'],

@@ -1,7 +1,7 @@
 
 import '../../domain/entities/auth_user_entity.dart';
 
-class AuthUserModel extends AuthUserEntiry {
+class AuthUserModel extends AuthUserEntity {
   AuthUserModel({
     required super.id,
     super.authId,
@@ -41,7 +41,7 @@ class AuthUserModel extends AuthUserEntiry {
     );
   }
 
-  // toJson bisa tetap sama jika AuthUserEntiry.toJson() sudah cukup,
+  // toJson bisa tetap sama jika AuthUserEntity.toJson() sudah cukup,
   // atau di-override jika model memiliki field tambahan.
   @override
   Map<String, dynamic> toJson() {
@@ -52,8 +52,8 @@ class AuthUserModel extends AuthUserEntiry {
     return json;
   }
 
-  AuthUserEntiry toEntity() {
-    return AuthUserEntiry(
+  AuthUserEntity toEntity() {
+    return AuthUserEntity(
       id: id,
       authId: authId,
       email: email,

@@ -5,13 +5,13 @@ import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.
 import 'package:lypsis_siakad/features/auth/domain/entities/auth_user_entity.dart';
 
 
-class GetCurrentUser implements UseCase<AuthUserEntiry?, NoParams> {
+class GetCurrentUser implements UseCase<AuthUserEntity?, NoParams> {
   final AuthRepository repository;
 
   GetCurrentUser(this.repository);
 
   @override
-  Future<Either<Failure, AuthUserEntiry?>> call(NoParams params) async {
+  Future<Either<Failure, AuthUserEntity?>> call(NoParams params) async {
     return await repository.getCurrentUser();
   }
 }
