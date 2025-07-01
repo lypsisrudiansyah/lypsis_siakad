@@ -2,16 +2,16 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:lypsis_siakad/core/error/failures.dart';
 import 'package:lypsis_siakad/core/usecases/usecase.dart';
-import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
+import 'package:lypsis_siakad/features/auth/domain/entities/auth_user_entity.dart';
 import 'package:lypsis_siakad/features/auth/domain/repositories/auth_repository.dart';
 
-class SignUp implements UseCase<UserProfile?, SignUpParams> {
+class SignUp implements UseCase<AuthUserEntiry?, SignUpParams> {
   final AuthRepository repository;
 
   SignUp(this.repository);
 
   @override
-  Future<Either<Failure, UserProfile?>> call(SignUpParams params) async {
+  Future<Either<Failure, AuthUserEntiry?>> call(SignUpParams params) async {
     return await repository.signUp(
       email: params.email,
       password: params.password,

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:lypsis_siakad/features/auth/domain/entities/user_profile.dart';
+import 'package:lypsis_siakad/features/auth/domain/entities/auth_user_entity.dart';
 import 'package:lypsis_siakad/features/auth/domain/usecases/get_current_user.dart';
 import 'package:lypsis_siakad/core/usecases/usecase.dart';
 import 'package:lypsis_siakad/features/auth/domain/usecases/sign_in.dart';
