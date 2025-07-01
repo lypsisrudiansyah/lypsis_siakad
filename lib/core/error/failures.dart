@@ -1,7 +1,7 @@
 abstract class Failure {
   final String message;
 
-  Failure(this.message);
+  Failure({required this.message});
 
   @override
   String toString() => message;
@@ -9,9 +9,9 @@ abstract class Failure {
 
 // General failures
 class ServerFailure extends Failure {
-  ServerFailure(String message) : super(message);
+  ServerFailure({required super.message});
 }
 
 class CacheFailure extends Failure {
-  CacheFailure(String message) : super(message);
+  CacheFailure({required super.message});
 }

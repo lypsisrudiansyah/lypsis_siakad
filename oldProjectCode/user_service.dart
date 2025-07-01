@@ -1,7 +1,7 @@
 class UserService {
   final SupabaseClient _supabase = Supabase.instance.client;
 
-  Future<List<AuthUserEntiry>> getAllUsers() async {
+  Future<List<AuthUserEntity>> getAllUsers() async {
     try {
       final response = await _supabase
           .from('users')
@@ -9,14 +9,14 @@ class UserService {
           .order('created_at', ascending: false);
 
       return response
-          .map<AuthUserEntiry>((json) => AuthUserEntiry.fromJson(json))
+          .map<AuthUserEntity>((json) => AuthUserEntity.fromJson(json))
           .toList();
     } catch (e) {
       throw Exception('Get all users failed: $e');
     }
   }
 
-  Future<List<AuthUserEntiry>> getUsersByRole(String role) async {
+  Future<List<AuthUserEntity>> getUsersByRole(String role) async {
     try {
       final response = await _supabase
           .from('users')
@@ -26,14 +26,14 @@ class UserService {
           .order('nama', ascending: true);
 
       return response
-          .map<AuthUserEntiry>((json) => AuthUserEntiry.fromJson(json))
+          .map<AuthUserEntity>((json) => AuthUserEntity.fromJson(json))
           .toList();
     } catch (e) {
       throw Exception('Get users by role failed: $e');
     }
   }
 
-  Future<AuthUserEntiry> createUser(AuthUserEntiry user) async {
+  Future<AuthUserEntity> createUser(AuthUserEntity user) async {
     try {
       final response = await _supabase
           .from('users')
@@ -45,13 +45,13 @@ class UserService {
           .select()
           .single();
 
-      return AuthUserEntiry.fromJson(response);
+      return AuthUserEntity.fromJson(response);
     } catch (e) {
       throw Exception('Create user failed: $e');
     }
   }
 
-  Future<AuthUserEntiry> updateUser(AuthUserEntiry user) async {
+  Future<AuthUserEntity> updateUser(AuthUserEntity user) async {
     try {
       final response = await _supabase
           .from('users')
@@ -63,7 +63,7 @@ class UserService {
           .select()
           .single();
 
-      return AuthUserEntiry.fromJson(response);
+      return AuthUserEntity.fromJson(response);
     } catch (e) {
       throw Exception('Update user failed: $e');
     }
@@ -84,12 +84,12 @@ class UserService {
     }
   }
 
-  Future<AuthUserEntiry?> getUserById(String userId) async {
+  Future<AuthUserEntity?> getUserById(String userId) async {
     try {
       final response =
           await _supabase.from('users').select().eq('id', userId).single();
 
-      return AuthUserEntiry.fromJson(response);
+      return AuthUserEntity.fromJson(response);
     } catch (e) {
       return null;
     }

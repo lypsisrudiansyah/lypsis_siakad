@@ -292,7 +292,7 @@ class _LoginViewState extends State<LoginView> {
 class AuthService {
   final SupabaseClient _supabase = Supabase.instance.client;
 
-  Future<AuthUserEntiry?> signIn(String email, String password) async {
+  Future<AuthUserEntity?> signIn(String email, String password) async {
     try {
       final response = await _supabase.auth.signInWithPassword(
         email: email,
